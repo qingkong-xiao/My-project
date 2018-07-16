@@ -1,0 +1,18 @@
+/**index.wxss**/
+.headImg{
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 50%;
+}
+.context{
+  margin-top: 150rpx;
+}
+.user-bottom{
+  border: 1px #ddd solid;
+  border-radius: 5rpx;
+  margin-top: 20rpx;
+  padding: 5px;
+}
+page{
+  height: 100%;
+}
