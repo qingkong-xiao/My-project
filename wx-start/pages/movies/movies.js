@@ -6,6 +6,9 @@ Page({
     inTheaters: {},
     comingSoon: {},
     top250: {},
+    showmovies:true,
+    showSearch:false,
+    searchResult:{}
   },
   onLoad: function() {
     var inTheatersUrl = app.globalData.doubanBase + '/v2/movie/in_theaters' + '?start=0&count=3';
@@ -21,6 +24,26 @@ Page({
     var title = event.currentTarget.dataset.title;
     wx.navigateTo({
       url: './more-movie/more-movie?title=' + title
+    })
+  },
+
+  onfocus:function(event){
+    this.setData({
+      showmovies:false,
+      showSearch:true
+    })
+  },
+  onBindConfirm:function(event){
+    var string = event.currentTarget.value;
+    var dataURL = app.globalData.doubanBase + '/v2/movie/search?q=' + string;
+    this.getMoviesData(dataURL,"searchResult","")
+  },
+
+  onCancelImgTap:function(){
+    this.setData({
+      showmovies:true,
+      showSearch:false,
+      searchResult:[]
     })
   },
 
