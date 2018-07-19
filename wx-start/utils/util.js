@@ -11,7 +11,25 @@ const formatEverage = Num =>{
   return arr;
 }
 
+const http = function(url){
+  return new Promise((resolve,reject) =>{
+    wx.request({
+          url: url,
+          method: 'Get',
+          header: {
+              "Content-Type": "json"
+          },
+          success: (res) =>{
+            resolve(res)
+          },
+          fail: (err) => {
+              console.log('api路径出现问题，及时更新代码')
+          }
+      })
+  })
+}
 
 module.exports = {
-  formatEverage: formatEverage
+  formatEverage: formatEverage,
+  http:http
 }
