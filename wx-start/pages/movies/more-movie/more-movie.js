@@ -55,7 +55,9 @@ Page({
 
   //@onPullDownRefresh用来监听用户下拉刷新事件，和onReachBottom事件一样，都需要在app.json或page.json中设置enablePullDownRefresh为true
   onPullDownRefresh:function(){
-    console.log(1111)
+    setTimeout(()=>{
+      wx.stopPullDownRefresh()
+    },500)
   },
 
   getMoviesData:function(url){
@@ -106,5 +108,12 @@ Page({
     }
     
     this.data.totalCount +=20;
+  },
+
+  onMovieTap: function (event) {
+    var movieId = event.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: '../movie-detail/movie-detail?id=' + movieId
+    })
   }
 })

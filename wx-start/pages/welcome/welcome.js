@@ -2,7 +2,7 @@
 //获取应用实例
 
 Page({
-  gotoPost:function(){
+  onTap:function(){
     wx.switchTab({
       url:'../posts/post'
     })
