@@ -34,7 +34,7 @@ Page({
         })
     },
     onBindConfirm: function(event) {
-        var string = event.currentTarget.value;
+      var string = event.detail.value;
         var dataURL = app.globalData.doubanBase + '/v2/movie/search?q=' + string;
         this.getMoviesData(dataURL, "searchResult", "")
     },
@@ -43,14 +43,14 @@ Page({
         this.setData({
             showmovies: true,
             showSearch: false,
-            searchResult: []
+            searchResult: {}
         })
     },
 
     onMovieTap:function(event){
       var movieId = event.currentTarget.dataset.movieid;
       wx.navigateTo({
-        url:'./movie-detail/movie-detail?movieid=' + movieId
+        url:'./movie-detail/movie-detail?id=' + movieId
       })
     },
 
@@ -63,7 +63,6 @@ Page({
                 "Content-Type": "json"
             },
             success: function(res) {
-                console.log(res)
                 that.processDoubanData(res.data, settedKey, categoryTitle);
             },
             fail: function() {

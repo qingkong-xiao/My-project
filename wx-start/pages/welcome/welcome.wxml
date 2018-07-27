@@ -1,8 +1,7 @@
-<!--index.wxml-->
 <view class="container">
-  <image src='../../images/avatar/2.png' class='headImg'></image>
-  <text class='context'>hello 七月</text>
-  <view class='user-bottom' catchtap='gotoPost'>
-    <text>开启小程序之旅</text>  
-  </view>
+    <image class="avatar" src="/images/avatar/1.png"></image>
+    <text class="motto">Hello, A</text>
+    <view class="journey-container" bindtap="onTap">
+        <text class="journey">开启小程序之旅</text>
+    </view>
 </view>
