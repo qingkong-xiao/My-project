@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>图片编辑</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+	<!-- 要注意标签语义化 -->
+	<header>
+		<div class="logo">
+			<img src="./logo.png">
+		</div>
+	</header>
+	<section class="containt">
+		<div class="menu-area">
+			<ul>
+				<li>上传图片</li>
+				<li>添加水印</li>
+				<li>自动抠图</li>
+				<li>图片放大器</li>
+				<li>马赛克</li>
+				<li>滤镜效果</li>
+				<li>图像还原</li>
+			</ul>
+		</div>
+		<div class="show-area">
+			<canvas id="canvas" width="600" height="400">浏览器版本太低不支持，请更换浏览器或升级</canvas>
+			<canvas id="canvas-mirror" style="display: none;">浏览器版本太低不支持，请更换浏览器或升级</canvas>
+			<canvas id="watermarkcanvas" style="display: none;">浏览器版本太低不支持，请更换浏览器或升级</canvas>
+			<div class="filter">
+				<ul>
+					<li>黑白滤镜</li>
+					<li>灰度滤镜</li>
+					<li>反色滤镜</li>
+					<li>模糊滤镜</li>
+					<li>马赛克滤镜</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<footer>
+		GitHub地址：qingkong-xiao
+	</footer>
+	<input type="file" id="file" style="opacity: 0;width: 0;height: 0;">
+	<script type="text/javascript" src="./js/element.js"></script>
+	<script type="text/javascript" src="./js/uploadFile.js"></script>
+	<script type="text/javascript" src="./js/functionList.js"></script>
+</body>
+</html>

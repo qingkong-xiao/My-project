@@ -1,0 +1,94 @@
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	height: 100%;
+}
+ul{
+	list-style: none;
+}
+header{
+	width: 100%;
+	height: 60px;
+	background-color: #1a1a20;
+	position: absolute;
+	top: 0;
+	min-width: 1000px;
+}
+header .logo{
+	width: 200px;
+	height: 50px;
+	margin:0 auto;
+	padding-top: 5px;
+
+}
+header .logo img{
+	width: 100%;
+}
+
+section {
+	overflow: hidden;
+	width: 100%;
+	background-color: red;
+	position: absolute;
+	top: 60px;
+	bottom: 60px;
+	display: flex;
+	justify-content: space-between;
+	min-width: 1000px;
+	min-height: 510px;
+}
+section .menu-area{
+	background-color: #1a1a20;
+	width: 150px;
+	color: #fff;
+	flex-shrink: 0;
+}
+section .menu-area ul{
+	color: #AC975B;
+}
+section .menu-area ul li{
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	cursor: pointer;
+	margin:5px 0;
+}
+section .show-area{
+	width: 100%;
+	background-color: #DCDCDC;
+}
+section .show-area #canvas{
+	display: block;
+	position: relative;
+	margin-top: 40px;
+	margin-left: 150px;
+}
+section .show-area .filter{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -199px;
+	display: none;
+}
+section .show-area ul li{
+	display: inline-block;
+	font-weight: bold;
+	color: #AC975B;
+	cursor: pointer;
+}
+
+footer{
+	width: 100%;
+	height: 60px;
+	background-color: #1a1a20;
+	line-height: 60px;
+	text-align: center;
+	color: #AC975B;
+	font-size: 16px;
+	position: fixed;
+	bottom: 0;
+	min-width: 1000px;
+}

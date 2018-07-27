@@ -1,0 +1,81 @@
+*{padding: 0;margin:0;}
+.ui-pictureEdit-wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	display:none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-options{
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 10px;
+	width: 570px;
+	margin:10px auto 0;
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-options li{
+	padding:0 5px;
+	height: 40px;
+	cursor: pointer;
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-options li:hover{
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 3px;
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-options li:first-child{
+	position: relative;
+} 
+.ui-pictureEdit-wrapper .ui-pictureEdit-options .ui-pictureEdit-filter{
+	position: absolute;
+	display: none;
+	background-color: rgba(0,0,0,0.2);
+	width: 90px;
+	top: 40px;
+	left: 0;
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-options li:hover .ui-pictureEdit-filter{
+	display: block;
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-options .ui-pictureEdit-filter li{
+	display: block;
+	font-size: 16px;
+}
+
+.ui-pictureEdit-wrapper .ui-pictureEdit-leftBtn,
+.ui-pictureEdit-wrapper .ui-pictureEdit-rightBtn{
+	width: 60px;
+	height: 100px;
+	font-size: 50px;
+	text-align: center;
+	line-height: 100px;
+	color:rgba(173,173,173,.5);
+	position: absolute;
+	cursor: pointer;
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-leftBtn:hover,
+.ui-pictureEdit-wrapper .ui-pictureEdit-rightBtn:hover{
+	background-color: rgba(0,0,0,.6);
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-leftBtn{
+	top: 50%;
+	left: 0;
+	margin-top: -50px;
+}
+.ui-pictureEdit-wrapper .ui-pictureEdit-rightBtn{
+	top: 50%;
+	right: 0;
+	margin-top: -50px;
+}
+
+.ui-pictureEdit-wrapper #ui-canvas{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -240px;
+	margin-left: -180px;
+}
